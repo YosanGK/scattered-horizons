@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Volunteer Opportunities - Scattered Horizons</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./css-folder/main.css" />
+    <link rel="stylesheet" href="./css-folder/volunteer.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Krona+One&family=Kufam:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="particles-bg" class="particles-background"></div>
+    <header>
+      <div class="logo">
+        <a href="index.html">Scattered Horizons</a>
+      </div>
+    </header>
+
+    <main class="volunteer-page">
+      <section class="volunteer-hero">
+        <h1>Support Global Education</h1>
+        <p>
+          Discover and support organizations working to improve education access
+          worldwide
+        </p>
+        <div class="search-container">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search for organizations..."
+          />
+          <select id="causeFilter">
+            <option value="">All Categories</option>
+            <option value="education">Education</option>
+            <option value="humanitarian">Humanitarian Aid</option>
+            <option value="poverty">Poverty Relief</option>
+            <option value="children">Children & Youth</option>
+          </select>
+        </div>
+      </section>
+
+      <section class="organizations-section">
+        <div class="organizations-grid" id="organizationsGrid">
+          <!-- Organizations will be loaded dynamically -->
+        </div>
+        <div class="pagination">
+          <button id="loadMore" class="load-more-btn">
+            Load More Organizations
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Global Inequality Initiative. All rights reserved.</p>
+    </footer>
+
+    <script type="module" src="./script-folder/volunteer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script type="module" src="./script-folder/volunteer-particles.js"></script>
+  </body>
+</html>

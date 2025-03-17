@@ -1,0 +1,533 @@
+.volunteer-page {
+    padding-top: 60px;
+    min-height: 100vh;
+    background-color: transparent;  
+    position: relative;
+    z-index: 2;
+}
+
+.volunteer-hero {
+    background: linear-gradient(rgba(0, 40, 83, 0.8), rgba(0, 40, 83, 0.9)),
+                url('/assets/education-bg.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 5rem 2rem;
+    text-align: center;
+    color: white;
+}
+
+.volunteer-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.volunteer-hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+}
+
+.search-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    animation: slideDown 0.5s ease-out;
+}
+
+#searchInput, #causeFilter {
+    padding: 1rem 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+}
+
+#searchInput {
+    flex: 2;
+}
+
+#causeFilter {
+    flex: 1;
+}
+
+.organizations-section {
+    max-width: 800px;  
+    margin: 2rem auto;
+    padding: 0 1rem;
+    position: relative;
+    z-index: 2;
+    background-color: transparent;  
+}
+
+.organizations-grid {
+    display: flex;
+    flex-direction: column;  
+    gap: 1.5rem;
+    padding: 1rem 0;
+    margin: 0 auto;
+}
+
+.organization-card {
+    width: 100%;  
+    max-width: 800px;  
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.95);  
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;  
+    flex-direction: row;  
+    animation: fadeIn 0.6s ease-out;
+}
+
+.organization-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+}
+
+.org-image-container {
+    flex: 0 0 200px; 
+    padding-top: 0; 
+    height: auto;
+    position: relative;
+    background: #f5f5f5;
+    border-radius: 12px;
+    margin: 0.75rem;
+}
+
+.org-image {
+    position: relative;  
+    height: 200px;  
+    width: 100%;
+    object-fit: contain;
+    padding: 1rem;
+    transition: transform 0.5s ease;
+    border-radius: 8px;
+}
+
+.organization-card:hover .org-image {
+    transform: scale(1.05);
+}
+
+.org-content {
+    flex: 1;  
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.org-content h3 {
+    font-size: 1.2rem; 
+    color: #1a1a1a;
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+}
+
+.org-content p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+
+.location {
+    font-size: 0.9rem;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.org-actions {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;  
+}
+
+.donate-btn, .volunteer-btn, .load-more-btn {
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 12px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.donate-btn {
+    background: #0078d4;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 120, 212, 0.2);
+    width: 100%;  
+    max-width: 200px;  
+    text-align: center;
+}
+
+.donate-btn:hover {
+    background: #0062ad;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 120, 212, 0.3);
+}
+
+.volunteer-btn {
+    background: white;
+    color: #0078d4;
+    border: 2px solid #0078d4;
+}
+
+.volunteer-btn:hover {
+    background: #f8f9fa;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.load-more-btn {
+    background: #0078d4;
+    color: white;
+    padding: 15px 40px;
+    margin: 3rem auto;
+    display: block;
+    box-shadow: 0 4px 15px rgba(0, 120, 212, 0.2);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.load-more-btn:hover {
+    background: #0062ad;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 120, 212, 0.4);
+}
+
+.loading, .error, .no-results {
+    text-align: center;
+    padding: 2rem;
+    grid-column: 1 / -1;
+}
+
+.pagination {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .volunteer-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .search-container {
+        flex-direction: column;
+    }
+
+    .organizations-grid {
+        max-width: 100%;
+    }
+
+    .organization-card {
+        flex-direction: column; 
+    }
+
+    .org-image-container {
+        flex: 0 0 auto;
+        height: 200px;
+        width: 100%;
+    }
+
+    .org-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .organization-card {
+        max-width: 100%;
+    }
+}
+
+.volunteer-section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.volunteer-section h1 {
+    color: #0078d4;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.companies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.company-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.company-card:hover {
+    transform: translateY(-5px);
+}
+
+.company-logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+.company-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.company-description {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.volunteer-btn {
+    background-color: #0078d4;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.volunteer-btn:hover {
+    background-color: #005fa3;
+}
+
+.user-welcome {
+    color: #0078d4;
+    margin-right: 1rem;
+    font-weight: 500;
+}
+
+.logged-in {
+    background-color: #dc3545;
+}
+
+.logged-in:hover {
+    background-color: #c82333;
+}
+
+.btn {
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    text-align: center;
+    flex: 1;
+}
+
+.btn-primary {
+    background: #0078d4;
+    color: white;
+}
+
+.btn-secondary {
+    background: #6c757d;
+    color: white;
+}
+
+.loading-indicator {
+    text-align: center;
+    padding: 40px;
+}
+
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #0078d4;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 1rem 2rem;
+}
+
+.logo a {
+    color: #0078d4;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.logo a:hover {
+    color: #005fa3;
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.volunteer-btn, .donate-btn {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 25px; 
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Add new styles for organization modal */
+.org-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.org-modal.active {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.org-modal-content {
+    background: white;
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.org-modal-header {
+    position: relative;
+    padding-top: 56.25%;
+    background: #f5f5f5;
+}
+
+.org-modal-header img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 2rem;
+}
+
+.org-modal-body {
+    padding: 2rem;
+}
+
+.org-modal-body h2 {
+    font-size: 1.8rem;
+    color: #0078d4;
+    margin-bottom: 1rem;
+}
+
+.org-modal-body p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 1.5rem;
+}
+
+.org-modal-footer {
+    padding: 1rem 2rem 2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.org-modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.org-modal-close:hover {
+    transform: scale(1.1);
+    background: #f8f9fa;
+}
+
+.particles-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: #f8f9fa;  
+}
